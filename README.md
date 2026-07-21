@@ -1,41 +1,81 @@
-# DevPulse AI - Backend
+# 🚀 DevPulse AI - Backend
 
-DevPulse AI is an AI Software Engineering Command Center designed to help developers understand codebases, explain architecture, detect bugs, generate documentation, and maintain project memory with **minimal OpenAI token usage**.
+DevPulse AI is an AI-powered Software Engineering Command Center that helps developers understand, analyze, and improve software projects using OpenAI. The backend is built with **Python** and **FastAPI** and combines local repository analysis with Retrieval-Augmented Generation (RAG) to deliver accurate responses while minimizing OpenAI token usage.
 
-## Tech Stack
-- **Python 3.12** & **FastAPI**
-- **SQLite** with **SQLAlchemy**
-- **ChromaDB** for vector store embeddings
-- **Tree-sitter**, **AST**, & **Regex** for token-free local code parsing
-- **Tiktoken** for precise context length management
-- **OpenAI SDK** (`gpt-4.1-mini`, `text-embedding-3-small`)
+## 🛠 Tech Stack
 
-## Key Architecture & Token Optimization
-- **AI Request Router**: Solves repository statistics, component counting, unused imports, route discovery, and metrics **100% locally** without calling OpenAI.
-- **RAG Engine**: Retrieves only Top 5 relevant chunks (400-600 tokens per chunk) keeping prompt context well under 2,000 tokens.
-- **Caching**: Multi-level cache for questions, documentation, and unchanged repository hashes.
+- Python 3.12
+- FastAPI
+- OpenAI API (GPT-5.6 & text-embedding-3-small)
+- SQLite
+- ChromaDB
+- SQLAlchemy
+- Tree-sitter
+- GitPython
+- Tiktoken
 
-## Getting Started
+## ✨ Features
 
-1. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+- AI Chat for Repository Q&A
+- Repository Analysis
+- Automated Documentation Generation
+- Bug Detection & Stack Trace Explanation
+- Project Health Dashboard
+- RAG-based Semantic Code Search
+- Token-Efficient AI Request Routing
+- Local Code Parsing and Analysis
 
-2. **Configure Environment**:
-   ```bash
-   cp .env.example .env
-   # Add your OPENAI_API_KEY to .env
-   ```
+## 🤖 How We Used Codex
 
-3. **Run Server**:
-   ```bash
-   uvicorn app.main:app --reload
-   ```
-   Or run the shell script:
-   ```bash
-   bash start.sh
-   ```
+OpenAI Codex was used to accelerate backend development by generating FastAPI routes, creating project structure, scaffolding services, improving API implementations, and assisting with debugging and code optimization.
 
-4. **API Documentation**:
-   Access interactive OpenAPI docs at `http://localhost:8000/docs`.
+## 🧠 How We Used GPT-5.6
+
+GPT-5.6 powers the AI capabilities of DevPulse AI. It explains code, answers repository questions, generates documentation, analyzes bugs, and provides architecture insights. To reduce API costs, only the most relevant code chunks retrieved through RAG are sent to GPT-5.6 instead of the entire repository.
+
+## ⚡ Token Optimization
+
+- Local repository analysis before AI calls
+- RAG retrieves only the Top 5 relevant code chunks
+- 400–600 token chunking
+- Cached AI responses
+- Repository hashing to avoid unnecessary reprocessing
+- Local parsing for project statistics and health analysis
+
+## 🚀 Getting Started
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Configure Environment
+
+Create a `.env` file and add:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+```
+
+### Run the Backend
+
+```bash
+uvicorn app.main:app --reload
+```
+
+or
+
+```bash
+bash start.sh
+```
+
+### API Documentation
+
+Visit:
+
+```
+http://localhost:8000/docs
+```
+
+to explore the interactive Swagger UI.
