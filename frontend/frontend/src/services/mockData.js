@@ -97,7 +97,7 @@ export const mockHealthMetrics = {
 export const mockRecentActivity = [
   {
     id: 'act-1',
-    user: 'Kishor (Lead Architect)',
+    user: 'admin ',
     action: 'Merged PR #142: Upgraded JWT validation & Session Caching',
     time: '12 mins ago',
     type: 'commit',
@@ -309,7 +309,7 @@ export const mockProjectMemories = [
     date: '2026-07-15T10:30:00Z',
     category: 'Architecture Decision',
     title: 'Adopted JWT with Short-lived Access Tokens & Redis Refresh Tokens',
-    author: 'Kishor (Lead Architect)',
+    author: 'admin ',
     queryTags: ['JWT', 'auth', 'security', 'redis'],
     summary: 'Decided to move from stateless cookie sessions to 15-minute RS256 JWT tokens with Redis-backed refresh token rotation to support multi-region API gateways.',
     details: 'Key reasons: (1) Lower DB load on every request, (2) Instant token revocation via Redis blacklist key prefixing, (3) Cross-domain OAuth SSO support for mobile app integration.'
@@ -358,14 +358,14 @@ export const mockInitialChatMessages = [
   {
     id: 'msg-1',
     sender: 'ai',
-    text: 'Hello Kishor! I am **DevPulse AI**, fully synced with your `devpulse-core-api` repository (312 files indexed). How can I assist with your codebase today?',
+    text: 'Hello admin! I am **DevPulse AI**, fully synced with your `devpulse-core-api` repository (312 files indexed). How can I assist with your codebase today?',
     timestamp: '10:00 AM'
   }
 ];
 
 export const mockUserProfile = {
-  name: 'Kishor Subedi',
-  email: 'kishor@devpulse.ai',
+  name: 'admin',
+  email: 'admin@devpulse.ai',
   role: 'Senior Principal Engineer',
   avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80',
   plan: 'Enterprise Developer Tier',

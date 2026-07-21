@@ -93,7 +93,7 @@ export function Settings() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-text">GitHub Enterprise Cloud</p>
-                <p className="text-xs text-muted">Connected as <span className="font-mono text-primary">@kishor-subedi</span></p>
+                <p className="text-xs text-muted">Connected as <span className="font-mono text-primary">admin</span></p>
               </div>
             </div>
 

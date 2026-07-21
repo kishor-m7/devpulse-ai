@@ -128,7 +128,7 @@ export function Navbar({ sidebarCollapsed }) {
               className="w-8 h-8 rounded-lg object-cover ring-2 ring-primary/40"
             />
             <div className="hidden lg:block text-left">
-              <p className="text-xs font-semibold text-text leading-tight">Kishor Subedi</p>
+              <p className="text-xs font-semibold text-text leading-tight">admin</p>
               <p className="text-[10px] text-muted leading-tight">Lead Engineer</p>
             </div>
             <ChevronDown className="w-3.5 h-3.5 text-muted hidden lg:block" />
@@ -146,8 +146,8 @@ export function Navbar({ sidebarCollapsed }) {
                   className="absolute right-0 mt-2 w-56 bg-card border border-border rounded-2xl shadow-2xl z-40 overflow-hidden"
                 >
                   <div className="p-3 border-b border-border bg-surface-100">
-                    <p className="text-xs font-semibold text-text">Kishor Subedi</p>
-                    <p className="text-[11px] text-muted font-mono">kishor@devpulse.ai</p>
+                    <p className="text-xs font-semibold text-text">admin</p>
+                    <p className="text-[11px] text-muted font-mono">admin@devpulse.ai</p>
                     <span className="inline-block mt-1 px-2 py-0.5 rounded text-[10px] bg-secondary/20 text-secondary border border-secondary/30">
                       Enterprise Admin
                     </span>
