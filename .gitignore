@@ -56,7 +56,3 @@ app/vector_db/
 *.log
 *.db
 *.sqlite3
-
-# Node dependencies
-node_modules/
-frontend/node_modules/
